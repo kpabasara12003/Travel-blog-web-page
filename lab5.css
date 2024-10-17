@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    
+    background-image: linear-gradient(to right, rgb(17, 113, 17) , azure);
+    
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 100%;
+    margin: auto;
+    padding: 10px;
+    overflow: hidden;
+}
+
+header {
+    background-color: #1d2552;
+    color: #fff;
+    padding: 10px;
+}
+
+#logo {
+    float: left;
+    font-size: 1.9rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Cantarell;
+    padding-left: 40px;
+ 
+}
+
+nav {
+    float: right;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 1.2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+
+.nav-links li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+
+.content {
+    padding: 50px ;
+    text-align: center;
+}
+
+.img{
+
+    width: 80%;    
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+.slider-container {
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+    position: relative;
+}
+.slider-wrapper {
+    width: 400%;
+    height: 100%;
+    display: flex;
+    transition: transform 0.8s ease-in-out;
+    animation: slide 32s infinite;
+}
+.slide {
+    width: 25%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.slide-content {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    color:azure;
+    font-family: sans-serif;
+   
+}
+.slide-content h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+.slide-content p {
+    font-size: 1.5rem;
+    color: azure;
+}
+@keyframes slide {
+    0%, 20% { transform: translateX(0); }
+    25%, 45% { transform: translateX(-25%); }
+    50%, 70% { transform: translateX(-50%); }
+    75%, 95% { transform: translateX(-75%); }
+    100% { transform: translateX(0); }
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 8px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    color: rgb(50, 0, 124);
+    margin-bottom: 20px;;
+}
+
+.gallery {
+    max-width: 95%;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    width: calc(33.33% - 20px);
+    background-color: white;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease;
+}
+.gallery-item:hover {
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    
+}
+
+
+.slider {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+.slider-images {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+.slider img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+.slider-nav {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+.slider-nav-item {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 0 5px;
+    cursor: pointer;
+}
+.slider-nav-item.active {
+    background-color: white;
+}
+
+
+.content {
+    padding: 15px;
+}
+h3 {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+p {
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+@media screen and (max-width: 900px) {
+    .gallery-item {
+        width: calc(50% - 15px);
+    }
+}
+@media screen and (max-width: 600px) {
+    .gallery-item {
+        width: 100%;
+    }
+}
+
+
+.wild-life{
+    width: 70%;
+    
+    justify-content: center;
+
+}
+/*
+.slider-big {
+    
+    height: 70vh;
+    overflow: hidden;
+    width: 60%;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+}
+
+.gallery-item-big {
+    width:60%;
+    background-color: white;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease;
+    justify-content: center;
+}
+.gallery-item-big {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}*/
+
+
+footer {
+    background-color: #1d2552;
+    padding: 30px;
+    text-align: center;
+    color: #fff;
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif
+}
